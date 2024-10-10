@@ -45,16 +45,15 @@ export const resolveChromiumBookmarksFilePath = ({
             Windows: () =>
                 join(app.getPath("home"), "AppData", "Local", "Microsoft", "Edge", "User Data", "Default", "Bookmarks"),
         },
-        "Yandex Browser": {
+        "Vivaldi": {
             Linux: null, // not supported,
-            macOS: () => join(app.getPath("appData"), "Yandex", "YandexBrowser", "Default", "Bookmarks"),
+            macOS: () => join(app.getPath("appData"), "Vivaldi", "User Data", "Default", "Bookmarks"),
             Windows: () =>
                 join(
                     app.getPath("home"),
                     "AppData",
                     "Local",
-                    "Yandex",
-                    "YandexBrowser",
+                    "Vivaldi",
                     "User Data",
                     "Default",
                     "Bookmarks",

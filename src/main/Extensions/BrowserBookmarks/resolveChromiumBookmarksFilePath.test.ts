@@ -5,7 +5,7 @@ import { resolveChromiumBookmarksFilePath } from "./resolveChromiumBookmarksFile
 
 describe(resolveChromiumBookmarksFilePath, () => {
     const getPathMock = vi.fn();
-    const app = <App>{ getPath: (p) => getPathMock(p) };
+    const app = <App> { getPath: (p) => getPathMock(p) };
 
     it("should return the correct file path on Windows for Google Chrome", () => {
         getPathMock.mockImplementationOnce(() => "home");
@@ -67,21 +67,21 @@ describe(resolveChromiumBookmarksFilePath, () => {
         expect(getPathMock).toHaveBeenCalledWith("appData");
     });
 
-    it("should return the correct file path on Windows for Yandex Browser", () => {
+    it("should return the correct file path on Windows for Vivaldi", () => {
         getPathMock.mockImplementationOnce(() => "home");
 
-        expect(resolveChromiumBookmarksFilePath({ browser: "Yandex Browser", app, operatingSystem: "Windows" })).toBe(
-            join("home", "AppData", "Local", "Yandex", "YandexBrowser", "User Data", "Default", "Bookmarks"),
+        expect(resolveChromiumBookmarksFilePath({ browser: "Vivaldi", app, operatingSystem: "Windows" })).toBe(
+            join("home", "AppData", "Local", "Vivaldi", "User Data", "Default", "Bookmarks"),
         );
 
         expect(getPathMock).toHaveBeenCalledWith("home");
     });
 
-    it("should return the correct file path on macOS for Yandex Browser", () => {
+    it("should return the correct file path on macOS for Vivaldi", () => {
         getPathMock.mockImplementationOnce(() => "appData");
 
-        expect(resolveChromiumBookmarksFilePath({ browser: "Yandex Browser", app, operatingSystem: "macOS" })).toBe(
-            join("appData", "Yandex", "YandexBrowser", "Default", "Bookmarks"),
+        expect(resolveChromiumBookmarksFilePath({ browser: "Vivaldi", app, operatingSystem: "macOS" })).toBe(
+            join("appData", "Vivaldi", "User Data", "Default", "Bookmarks"),
         );
 
         expect(getPathMock).toHaveBeenCalledWith("appData");

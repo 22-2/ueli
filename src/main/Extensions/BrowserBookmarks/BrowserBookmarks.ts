@@ -48,7 +48,7 @@ export class BrowserBookmarks implements Extension {
         private readonly urlImageGenerator: UrlImageGenerator,
         private readonly operatingSystem: OperatingSystem,
         private readonly translator: Translator,
-    ) {}
+    ) { }
 
     public async getSearchResultItems(): Promise<SearchResultItem[]> {
         const { t } = this.translator.createT(this.getI18nResources());
@@ -101,7 +101,7 @@ export class BrowserBookmarks implements Extension {
     }
 
     public isSupported(): boolean {
-        return (<OperatingSystem[]>["Windows", "macOS"]).includes(this.operatingSystem);
+        return (<OperatingSystem[]> ["Windows", "macOS"]).includes(this.operatingSystem);
     }
 
     public getSettingDefaultValue<T>(key: string): T {
@@ -192,7 +192,7 @@ export class BrowserBookmarks implements Extension {
             "Brave Browser": "brave-browser.png",
             "Google Chrome": "google-chrome.png",
             "Microsoft Edge": "microsoft-edge.png",
-            "Yandex Browser": "yandex-browser.svg",
+            "Vivaldi": "yandex-browser.svg",
         };
 
         return this.assetPathResolver.getExtensionAssetPath(this.id, assetFileNames[key]);

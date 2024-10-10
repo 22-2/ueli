@@ -32,4 +32,4 @@ Supported browsers:
 -   Firefox
 -   Google Chrome
 -   Microsoft Edge
--   Yandex Browser
+-   Vivaldi

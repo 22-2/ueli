@@ -41,8 +41,8 @@ export class BrowserBookmarksModule implements ExtensionModule {
                     "Microsoft Edge": new ChromiumBrowserBookmarkRepository(fileSystemUtility, () =>
                         resolveChromiumBookmarksFilePath({ browser: "Microsoft Edge", operatingSystem, app }),
                     ),
-                    "Yandex Browser": new ChromiumBrowserBookmarkRepository(fileSystemUtility, () =>
-                        resolveChromiumBookmarksFilePath({ browser: "Yandex Browser", operatingSystem, app }),
+                    "Vivaldi": new ChromiumBrowserBookmarkRepository(fileSystemUtility, () =>
+                        resolveChromiumBookmarksFilePath({ browser: "Vivaldi", operatingSystem, app }),
                     ),
                 },
                 settingsManager,

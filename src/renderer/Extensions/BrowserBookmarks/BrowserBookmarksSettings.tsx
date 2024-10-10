@@ -18,7 +18,7 @@ export const BrowserBookmarksSettings = () => {
         "Firefox",
         "Google Chrome",
         "Microsoft Edge",
-        "Yandex Browser",
+        "Vivaldi",
     ];
 
     const searchResultStyles = ["nameOnly", "urlOnly", "nameAndUrl"];
