@@ -1,9 +1,7 @@
 name: Publish new release(Manual)
 
 on:
-    push:
-        tags:
-            - "*"
+    workflow_dispatch: 
 
 jobs:
     release:
